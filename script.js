@@ -5,13 +5,25 @@
 */
 
 let MessageGenerator = {
-    firstWord: ["Hourly", "Daily", "Weekly", "Monthly", "Yearly"],
+    _firstWord: ["Hourly", "Daily", "Weekly", "Monthly", "Yearly"],
     
-    secondWord: ["Eat", "Love", "Kill", "Touch", "Feel", "Twist", "Punch", "Pat",       
+    _secondWord: ["Eat", "Love", "Kill", "Touch", "Feel", "Twist", "Punch", "Pat",       
                 "Kiss", "Fist", "Squeeze", "Lick", "Tickle", "Cuddle", "Hug", "Pet"],
     
-    thirdWord: ["chickens", "cows", "dogs", "humans", "cats", "turtles", "babies", "hamsters", "rats", 
+    _thirdWord: ["chickens", "cows", "dogs", "humans", "cats", "turtles", "babies", "hamsters", "rats", 
                 "bugs", "tigers", "lions", "panthers", "possums", "raccoons", "monkeys", "zebras"],
+
+    get firstWord(){
+        return this._firstWord;
+    },
+
+    get secondWord(){
+        return this._secondWord;
+    },
+
+    get thirdWord(){
+        return this._thirdWord;
+    },
 
     // Returns array of length 3 with the three randomly selected words in order of usage
     selectRandomWords(){
@@ -32,3 +44,6 @@ let MessageGenerator = {
 }
 
 MessageGenerator.createMessage();
+console.log(MessageGenerator.firstWord);
+MessageGenerator.addFirstWord("sigh");
+console.log(MessageGenerator.firstWord);
