@@ -44,6 +44,3 @@ let MessageGenerator = {
 }
 
 MessageGenerator.createMessage();
-console.log(MessageGenerator.firstWord);
-MessageGenerator.addFirstWord("sigh");
-console.log(MessageGenerator.firstWord);
